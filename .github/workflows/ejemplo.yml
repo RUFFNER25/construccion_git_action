@@ -1,0 +1,11 @@
+name: ejemplo
+
+on: push
+
+	jobs:
+		build:
+			runs-on: ubuntu-latest
+
+			steps:
+				-name: ejecutar un saludo
+				 run: echo "hello, github actionn!"
