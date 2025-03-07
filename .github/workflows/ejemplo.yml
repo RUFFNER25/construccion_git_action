@@ -3,43 +3,9 @@ name: FlujoTrabajo1
 on: [push]
 
 jobs: 
-  prueba1: 
+  trabajo1:
     runs-on: ubuntu-latest
-    steps: 
-      - name: "Checkout del repositorio"
-        uses: actions/checkout@v3
 
-      - name: "Mensaje"
-        run: echo "Primera iteración con GitHub Actions"
-
-      - name: "Crea Archivo"
-        run: touch alumnos.txt
-
-      - name: "Adiciona Alumnos"
-        run: |
-          echo "Alumno1" >> alumnos.txt
-          echo "Alumno2" >> alumnos.txt
-          echo "Alumno3" >> alumnos.txt
-          echo "Alumno4" >> alumnos.txt
-          echo "Alumno5" >> alumnos.txt
-
-      - name: "Muestra Contenido"
-        run: cat alumnos.txt
-
-      - name: "Sube Archivo como Artefacto"
-        uses: actions/upload-artifact@v3
-        with:
-          name: alumnos
-          path: alumnos.txt
-
-  Prueba2: 
-    runs-on: ubuntu-latest
-    needs: prueba1  # Asegura que este trabajo dependa de la finalización de prueba1
-    steps: 
-      - name: "Descarga Archivo desde Artefacto"
-        uses: actions/download-artifact@v3
-        with:
-          name: alumnos
-
-      - name: "Muestra contenido de alumnos.txt"
-        run: cat alumnos.txt
+    steps:
+      -name: listar archivos
+      run: ls -la
