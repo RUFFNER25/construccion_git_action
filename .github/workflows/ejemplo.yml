@@ -1,9 +1,9 @@
 name: FlujoTrabajo1
 
 on: 
-push:
-  branches:
-    - master
+  push:
+    branches:
+      - main
 
 jobs: 
   trabajo1:
