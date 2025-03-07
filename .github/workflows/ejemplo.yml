@@ -1,6 +1,9 @@
 name: FlujoTrabajo1
 
-on: [push]
+on: 
+push:
+  branches:
+    - master
 
 jobs: 
   trabajo1:
